@@ -1,0 +1,411 @@
+INFO:root:epd2in13bc Demo
+INFO:root:init and Clear
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+INFO:root:Drawing
+INFO:root:1.Drawing on the Horizontal image...
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:Horizontal
+DEBUG:root:Horizontal
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+INFO:root:Goto Sleep...
+DEBUG:root:e-Paper busy
+DEBUG:root:e-Paper busy release
+DEBUG:root:spi end
+DEBUG:root:close 5V, Module enters 0 power consumption ...
