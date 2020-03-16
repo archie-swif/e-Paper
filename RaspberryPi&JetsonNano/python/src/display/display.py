@@ -1,5 +1,6 @@
 import os
 import sys
+import time
 
 from PIL import Image, ImageDraw
 
@@ -31,6 +32,8 @@ class Display:
         from waveshare_epd import epd2in13bc
         epd = epd2in13bc.EPD()
         epd.init()
+        time.sleep(2)
+
 
     def show_on_hardware(self):
         if not self.epd:
