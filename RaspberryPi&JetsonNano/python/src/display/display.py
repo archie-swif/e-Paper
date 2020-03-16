@@ -28,6 +28,8 @@ class Display:
         from waveshare_epd import epd2in13bc
         self.epd = epd2in13bc.EPD()
         self.epd.init()
+        self.epd.Clear()
+        time.sleep(1)
 
     def show_on_hardware(self):
         if not self.epd:
@@ -36,5 +38,5 @@ class Display:
         black_buff = self.epd.getbuffer(self.black_img)
         yellow_buff = self.epd.getbuffer(self.yellow_img)
         self.epd.display(black_buff, yellow_buff)
-        self.epd.sleep()
         time.sleep(2)
+        self.epd.sleep()
