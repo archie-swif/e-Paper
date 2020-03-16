@@ -25,15 +25,9 @@ class Display:
         pass
 
     def lazy_init_hardware(self):
-        picdir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'pic')
-        libdir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'lib')
-        if os.path.exists(libdir):
-            sys.path.append(libdir)
         from waveshare_epd import epd2in13bc
-        epd = epd2in13bc.EPD()
-        epd.init()
-        time.sleep(2)
-
+        self.epd = epd2in13bc.EPD()
+        self.epd.init()
 
     def show_on_hardware(self):
         if not self.epd:
@@ -42,8 +36,5 @@ class Display:
         black_buff = self.epd.getbuffer(self.black_img)
         yellow_buff = self.epd.getbuffer(self.yellow_img)
         self.epd.display(black_buff, yellow_buff)
-
-    def __del__(self):
-        if self.epd:
-            self.epd.sleep()
-            self.epd.epdconfig.module_exit()
+        self.epd.sleep()
+        time.sleep(2)

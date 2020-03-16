@@ -19,11 +19,11 @@ try:
     display.black.rectangle((cell * row, cell * 1, cell * (row + 1), cell * 2), fill=1, outline=0)
     display.black.rectangle((cell * row, cell * 2, cell * (row + 1), cell * 3), fill=1, outline=1)
 
-    # display.show_on_hardware()
-    display.show_on_software()
+    display.show_on_hardware()
+    # display.show_on_software()
 
 except IOError as e:
-    pass
+    print(e)
 
 except KeyboardInterrupt:
     exit()
