@@ -11,7 +11,6 @@ import logging
 from waveshare_epd import epd2in13bc
 import time
 from PIL import Image,ImageDraw,ImageFont
-import traceback
 
 logging.basicConfig(level=logging.DEBUG)
 
@@ -93,5 +92,5 @@ except IOError as e:
     
 except KeyboardInterrupt:    
     logging.info("ctrl + c:")
-    epd2in13bc.epdconfig.module_exit()
+    waveshare_epd.epdconfig.module_exit()
     exit()

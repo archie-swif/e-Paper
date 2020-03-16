@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
-from src.display.display import Display
+from display.display import Display
 
 try:
     # 298/126

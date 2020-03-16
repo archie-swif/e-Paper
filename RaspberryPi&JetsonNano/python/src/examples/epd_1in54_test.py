@@ -8,21 +8,19 @@ if os.path.exists(libdir):
     sys.path.append(libdir)
 
 import logging
-from waveshare_epd import epd1in54_V2
+from waveshare_epd import epd1in54
 import time
 from PIL import Image,ImageDraw,ImageFont
-import traceback
 
 logging.basicConfig(level=logging.DEBUG)
 
 try:
-    logging.info("epd1in54_V2 Demo")
+    logging.info("epd1in54 Demo")
     
-    epd = epd1in54_V2.EPD()
+    epd = epd1in54.EPD()
     logging.info("init and Clear")
-    epd.init()
+    epd.init(epd.lut_full_update)
     epd.Clear(0xFF)
-    time.sleep(1)
     
     # Drawing on the image
     logging.info("1.Drawing on the image...")
@@ -60,11 +58,12 @@ try:
     epd.display(epd.getbuffer(image1))
     time.sleep(2)
     
-    # partial update
-    logging.info("4.show time...")    
-    time_image = Image.new('1', (epd.width, epd.height), 255)
-    epd.displayPartBaseImage(epd.getbuffer(time_image))
+    # # partial update
+    logging.info("4.show time...")
+    epd.init(epd.lut_partial_update)    
+    epd.Clear(0xFF)
     
+    time_image = Image.new('1', (epd.width, epd.height), 255)
     time_draw = ImageDraw.Draw(time_image)
     num = 0
     while (True):
@@ -72,13 +71,13 @@ try:
         time_draw.text((10, 10), time.strftime('%H:%M:%S'), font = font, fill = 0)
         newimage = time_image.crop([10, 10, 120, 50])
         time_image.paste(newimage, (10,10))  
-        epd.displayPart(epd.getbuffer(time_image))
+        epd.display(epd.getbuffer(time_image))
         num = num + 1
         if(num == 10):
             break
     
     logging.info("Clear...")
-    epd.init()
+    epd.init(epd.lut_full_update)
     epd.Clear(0xFF)
     
     logging.info("Goto Sleep...")
@@ -89,5 +88,5 @@ except IOError as e:
     
 except KeyboardInterrupt:    
     logging.info("ctrl + c:")
-    epd1in54_V2.epdconfig.module_exit()
+    waveshare_epd.epdconfig.module_exit()
     exit()

@@ -8,30 +8,29 @@ if os.path.exists(libdir):
     sys.path.append(libdir)
 
 import logging
-from waveshare_epd import epd5in83
+from waveshare_epd import epd2in9
 import time
 from PIL import Image,ImageDraw,ImageFont
-import traceback
 
 logging.basicConfig(level=logging.DEBUG)
 
 try:
-    logging.info("epd5in83 Demo")
+    logging.info("epd2in9 Demo")
     
-    epd = epd5in83.EPD()
+    epd = epd2in9.EPD()
     logging.info("init and Clear")
-    epd.init()
-    epd.Clear()
+    epd.init(epd.lut_full_update)
+    epd.Clear(0xFF)
     
     font24 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 24)
     font18 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 18)
     
     # Drawing on the Horizontal image
     logging.info("1.Drawing on the Horizontal image...")
-    Himage = Image.new('1', (epd.width, epd.height), 255)  # 255: clear the frame
+    Himage = Image.new('1', (epd.height, epd.width), 255)  # 255: clear the frame
     draw = ImageDraw.Draw(Himage)
     draw.text((10, 0), 'hello world', font = font24, fill = 0)
-    draw.text((10, 20), '5.83inch e-Paper', font = font24, fill = 0)
+    draw.text((10, 20), '2.9inch e-Paper', font = font24, fill = 0)
     draw.text((150, 0), u'微雪电子', font = font24, fill = 0)    
     draw.line((20, 50, 70, 100), fill = 0)
     draw.line((70, 50, 20, 100), fill = 0)
@@ -46,10 +45,10 @@ try:
     
     # Drawing on the Vertical image
     logging.info("2.Drawing on the Vertical image...")
-    Limage = Image.new('1', (epd.height, epd.width), 255)  # 255: clear the frame
+    Limage = Image.new('1', (epd.width, epd.height), 255)  # 255: clear the frame
     draw = ImageDraw.Draw(Limage)
     draw.text((2, 0), 'hello world', font = font18, fill = 0)
-    draw.text((2, 20), '5.83inch epd', font = font18, fill = 0)
+    draw.text((2, 20), '2.9inch epd', font = font18, fill = 0)
     draw.text((20, 50), u'微雪电子', font = font18, fill = 0)
     draw.line((10, 90, 60, 140), fill = 0)
     draw.line((60, 90, 10, 140), fill = 0)
@@ -63,7 +62,7 @@ try:
     time.sleep(2)
     
     logging.info("3.read bmp file")
-    Himage = Image.open(os.path.join(picdir, '5in83.bmp'))
+    Himage = Image.open(os.path.join(picdir, '2in9.bmp'))
     epd.display(epd.getbuffer(Himage))
     time.sleep(2)
     
@@ -73,10 +72,28 @@ try:
     Himage2.paste(bmp, (50,10))
     epd.display(epd.getbuffer(Himage2))
     time.sleep(2)
-
+    
+    # partial update
+    logging.info("5.show time")
+    epd.init(epd.lut_partial_update)    
+    epd.Clear(0xFF)
+    time_image = Image.new('1', (epd.height, epd.width), 255)
+    time_draw = ImageDraw.Draw(time_image)
+    num = 0
+    while (True):
+        time_draw.rectangle((10, 10, 120, 50), fill = 255)
+        time_draw.text((10, 10), time.strftime('%H:%M:%S'), font = font24, fill = 0)
+        newimage = time_image.crop([10, 10, 120, 50])
+        time_image.paste(newimage, (10,10))  
+        epd.display(epd.getbuffer(time_image))
+        
+        num = num + 1
+        if(num == 10):
+            break
+            
     logging.info("Clear...")
-    epd.init()
-    epd.Clear()
+    epd.init(epd.lut_full_update)
+    epd.Clear(0xFF)
     
     logging.info("Goto Sleep...")
     epd.sleep()
@@ -86,5 +103,5 @@ except IOError as e:
     
 except KeyboardInterrupt:    
     logging.info("ctrl + c:")
-    epd5in83.epdconfig.module_exit()
+    waveshare_epd.epdconfig.module_exit()
     exit()

@@ -10,7 +10,7 @@ if os.path.exists(libdir):
 
 import logging
 from waveshare_epd import epd2in13bc
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw
 from random import randint
 
 logging.basicConfig(level=logging.DEBUG)
@@ -47,5 +47,5 @@ except IOError as e:
 
 except KeyboardInterrupt:
     logging.info("ctrl + c:")
-    epd2in13bc.epdconfig.module_exit()
+    waveshare_epd.epdconfig.module_exit()
     exit()

@@ -8,69 +8,51 @@ if os.path.exists(libdir):
     sys.path.append(libdir)
 
 import logging
-from waveshare_epd import epd2in9d
+from waveshare_epd import epd2in13d
 import time
 from PIL import Image,ImageDraw,ImageFont
-import traceback
 
+#Set output log level
 logging.basicConfig(level=logging.DEBUG)
 
 try:
-    logging.info("epd2in9d Demo")
+    logging.info("epd2in13d Demo")
     
-    epd = epd2in9d.EPD()
+    epd = epd2in13d.EPD()
     logging.info("init and Clear")
     epd.init()
     epd.Clear(0xFF)
     
+    font15 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 15)
     font24 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 24)
-    font18 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 18)
-    
     # Drawing on the Horizontal image
     logging.info("1.Drawing on the Horizontal image...")
     Himage = Image.new('1', (epd.height, epd.width), 255)  # 255: clear the frame
     draw = ImageDraw.Draw(Himage)
-    draw.text((10, 0), 'hello world', font = font24, fill = 0)
-    draw.text((10, 20), '2.9inch e-Paper d', font = font24, fill = 0)
-    draw.text((150, 0), u'微雪电子', font = font24, fill = 0)    
-    draw.line((20, 50, 70, 100), fill = 0)
-    draw.line((70, 50, 20, 100), fill = 0)
-    draw.rectangle((20, 50, 70, 100), outline = 0)
-    draw.line((165, 50, 165, 100), fill = 0)
-    draw.line((140, 75, 190, 75), fill = 0)
-    draw.arc((140, 50, 190, 100), 0, 360, fill = 0)
-    draw.rectangle((80, 50, 130, 100), fill = 0)
-    draw.chord((200, 50, 250, 100), 0, 360, fill = 0)
+    draw.rectangle([(0,0),(50,50)],outline = 0)
+    draw.rectangle([(55,0),(100,50)],fill = 0)
+    draw.line([(0,0),(50,50)], fill = 0,width = 1)
+    draw.line([(0,50),(50,0)], fill = 0,width = 1)
+    draw.chord((10, 60, 50, 100), 0, 360, fill = 0)
+    draw.ellipse((55, 60, 95, 100), outline = 0)
+    draw.pieslice((55, 60, 95, 100), 90, 180, outline = 0)
+    draw.pieslice((55, 60, 95, 100), 270, 360, fill = 0)
+    draw.polygon([(110,0),(110,50),(150,25)],outline = 0)
+    draw.polygon([(190,0),(190,50),(150,25)],fill = 0)
+    draw.text((110, 60), 'e-Paper demo', font = font15, fill = 0)
+    draw.text((110, 80), u'微雪电子', font = font15, fill = 0)
     epd.display(epd.getbuffer(Himage))
     time.sleep(2)
-    
-    # Drawing on the Vertical image
-    logging.info("2.Drawing on the Vertical image...")
-    Limage = Image.new('1', (epd.width, epd.height), 255)  # 255: clear the frame
-    draw = ImageDraw.Draw(Limage)
-    draw.text((2, 0), 'hello world', font = font18, fill = 0)
-    draw.text((2, 20), '2.9inch epd d', font = font18, fill = 0)
-    draw.text((20, 50), u'微雪电子', font = font18, fill = 0)
-    draw.line((10, 90, 60, 140), fill = 0)
-    draw.line((60, 90, 10, 140), fill = 0)
-    draw.rectangle((10, 90, 60, 140), outline = 0)
-    draw.line((95, 90, 95, 140), fill = 0)
-    draw.line((70, 115, 120, 115), fill = 0)
-    draw.arc((70, 90, 120, 140), 0, 360, fill = 0)
-    draw.rectangle((10, 150, 60, 200), fill = 0)
-    draw.chord((70, 150, 120, 200), 0, 360, fill = 0)
-    epd.display(epd.getbuffer(Limage))
-    time.sleep(2)
-    
+        
     logging.info("3.read bmp file")
-    Himage = Image.open(os.path.join(picdir, '2in9d.bmp'))
+    Himage = Image.open(os.path.join(picdir, '2in13d.bmp'))
     epd.display(epd.getbuffer(Himage))
     time.sleep(2)
     
     logging.info("4.read bmp file on window")
     Himage2 = Image.new('1', (epd.height, epd.width), 255)  # 255: clear the frame
     bmp = Image.open(os.path.join(picdir, '100x100.bmp'))
-    Himage2.paste(bmp, (50,10))
+    Himage2.paste(bmp, (20,0))
     epd.display(epd.getbuffer(Himage2))
     time.sleep(2)
     
@@ -103,5 +85,5 @@ except IOError as e:
     
 except KeyboardInterrupt:    
     logging.info("ctrl + c:")
-    epd2in9d.epdconfig.module_exit()
+    waveshare_epd.epdconfig.module_exit()
     exit()

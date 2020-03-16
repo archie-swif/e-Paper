@@ -1,7 +1,7 @@
 import os
 import sys
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw
 
 
 class Display:
@@ -39,7 +39,6 @@ class Display:
         black_buff = self.epd.getbuffer(self.black_img)
         yellow_buff = self.epd.getbuffer(self.yellow_img)
         self.epd.display(black_buff, yellow_buff)
-
 
     def __del__(self):
         if self.epd:
