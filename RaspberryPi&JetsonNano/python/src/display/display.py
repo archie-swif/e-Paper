@@ -31,6 +31,12 @@ class Display:
         self.black = ImageDraw.Draw(self.black_img)
         self.yellow = ImageDraw.Draw(self.yellow_img)
 
+    def print_symbol(self, symbol, line, char, draw):
+        for y in range(len(symbol)):
+            for x in range(len(symbol[y])):
+                if symbol[y][x] == 1:
+                    draw.point((x + char * 8, y + line * 8), fill=0)
+
     def show_on_software(self):
         # self.black_img.convert('RGB').show()
         # self.yellow_img.convert('RGB').show()
