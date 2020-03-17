@@ -6,7 +6,7 @@ from PIL import Image, ImageDraw
 # from waveshare_epd import epd2in13bc
 
 class Display:
-    resolution = (298, 126)
+    resolution = (212, 104)
 
     black_img = Image.new('1', resolution, 255)
     yellow_img = Image.new('1', resolution, 255)
@@ -27,7 +27,7 @@ class Display:
     def lazy_init_hardware(self):
         # time.sleep(2)
         # self.epd = epd2in13bc.EPD()
-        # self.epd = _EPD_Stub()
+        self.epd = _EPD_Stub()
         self.epd.init()
         self.epd.Clear()
         time.sleep(1)
