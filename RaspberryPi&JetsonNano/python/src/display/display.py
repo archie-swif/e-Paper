@@ -5,7 +5,7 @@ import time
 
 from PIL import Image, ImageDraw
 
-from display.EPD_Stub import EPD_STUB
+from stub.EPD_Stub import EPD_STUB
 
 
 class Display:
