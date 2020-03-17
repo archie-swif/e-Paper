@@ -4,9 +4,6 @@ import time
 
 from PIL import Image, ImageDraw
 
-from display.epd_stub import EPD_Stub
-
-
 class Display:
     resolution = (298, 126)
 
@@ -30,7 +27,7 @@ class Display:
         from waveshare_epd import epd2in13bc
         time.sleep(2)
         self.epd = epd2in13bc.EPD()
-        # self.epd = EPD_Stub()
+        # self.epd = _EPD_Stub()
         self.epd.init()
         self.epd.Clear()
         time.sleep(1)
@@ -44,3 +41,32 @@ class Display:
         self.epd.display(black_buff, yellow_buff)
         time.sleep(2)
         self.epd.sleep()
+
+
+class _EPD_Stub:
+    def reset(self):
+        pass
+
+    def send_command(self, command):
+        pass
+
+    def send_data(self, data):
+        pass
+
+    def ReadBusy(self):
+        pass
+
+    def init(self):
+        return 0
+
+    def getbuffer(self, image):
+        return []
+
+    def display(self, imageblack, imagered):
+        pass
+
+    def Clear(self):
+        pass
+
+    def sleep(self):
+        pass
