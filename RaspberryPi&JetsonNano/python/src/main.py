@@ -10,16 +10,13 @@ try:
     # 298/126
     display = Display()
 
-    display.black.rectangle((32, 0, 96, 104), fill=0)
-    display.show_on_hardware()
+    display.black.rectangle((0, 32, 104, 96), fill=0)
+    display.yellow.rectangle((0, 64, 104, 160), fill=0)
+    display.black.rectangle((0, 128, 104, 192), fill=0)
 
-    display.yellow.rectangle((64, 0, 160, 104), fill=0)
     display.show_on_hardware()
-
-    display.black.rectangle((128, 0, 192, 104), fill=0)
-    display.show_on_hardware()
-
-    #display.show_on_software()
+    # display.show_on_software()
+    # display.show_on_stub()
 
 except IOError as e:
     print(e)
