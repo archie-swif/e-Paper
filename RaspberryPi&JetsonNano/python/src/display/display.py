@@ -32,8 +32,21 @@ class Display:
         self.yellow = ImageDraw.Draw(self.yellow_img)
 
     def show_on_software(self):
-        self.black_img.convert('RGB').show()
-        self.yellow_img.convert('RGB').show()
+        # self.black_img.convert('RGB').show()
+        # self.yellow_img.convert('RGB').show()
+
+        yellow_color = (255, 255, 0)
+        black_color = (0, 0, 0)
+
+        self.color_img = self.black_img.convert('RGB')
+
+        width, height = self.yellow_img.size
+        for y in range(height):
+            for x in range(width):
+                if self.yellow_img.getpixel((x, y)) == 0:
+                    self.color_img.putpixel((x, y), yellow_color)
+
+        self.color_img.show()
 
     def lazy_init_hardware(self):
         from waveshare_epd import epd2in13bc
