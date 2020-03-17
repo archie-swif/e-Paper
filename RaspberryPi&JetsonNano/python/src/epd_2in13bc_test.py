@@ -6,14 +6,19 @@ import os
 import logging
 import time
 from PIL import Image, ImageDraw, ImageFont
+
+from display.display import Display
 from waveshare_epd import epd2in13bc
 
 logging.basicConfig(level=logging.DEBUG)
 
 try:
     logging.info("epd2in13bc Demo")
-
     epd = epd2in13bc.EPD()
+
+    display = Display()
+    display.epd = epd
+
     logging.info("init and Clear")
     epd.init()
     epd.Clear()
