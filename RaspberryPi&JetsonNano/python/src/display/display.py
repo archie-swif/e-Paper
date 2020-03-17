@@ -4,6 +4,8 @@ import time
 
 from PIL import Image, ImageDraw
 
+from display.epd_stub import EPD_Stub
+
 
 class Display:
     resolution = (298, 126)
@@ -26,7 +28,9 @@ class Display:
 
     def lazy_init_hardware(self):
         from waveshare_epd import epd2in13bc
+        time.sleep(2)
         self.epd = epd2in13bc.EPD()
+        # self.epd = EPD_Stub()
         self.epd.init()
         self.epd.Clear()
         time.sleep(1)

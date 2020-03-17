@@ -6,21 +6,11 @@ try:
     # 298/126
     display = Display()
 
-    cell = 32;
-    row = 1;
+    display.black.rectangle((32, 0, 94, 126), fill=0)
+    display.yellow.rectangle((64, 0, 128, 126), fill=0)
 
-    row = 1
-    display.black.rectangle((cell * row, cell * 0, cell * (row + 1), cell * 1))
-    display.black.rectangle((cell * row, cell * 1, cell * (row + 1), cell * 2), fill=0, outline=0)
-    display.black.rectangle((cell * row, cell * 2, cell * (row + 1), cell * 3), fill=0, outline=1)
-
-    row = row + 1
-    display.black.rectangle((cell * row, cell * 0, cell * (row + 1), cell * 1))
-    display.black.rectangle((cell * row, cell * 1, cell * (row + 1), cell * 2), fill=1, outline=0)
-    display.black.rectangle((cell * row, cell * 2, cell * (row + 1), cell * 3), fill=1, outline=1)
-
-    display.show_on_hardware()
-    # display.show_on_software()
+    # display.show_on_hardware()
+    display.show_on_software()
 
 except IOError as e:
     print(e)
