@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
+import random
 import time
 
 from PIL import Image, ImageDraw
@@ -11,31 +12,15 @@ try:
     # w=104 h=212
     display = Display()
 
-    line = 0;
-    char = 0;
-
-    A = Symbols.get_symbol('A')
     X = Symbols.get_symbol('X')
-    NOT_A = Symbols.get_symbol('!A')
+    for i in range(0, 1000):
+        display.print_symbol(X, random.randrange(0, 27), random.randrange(0, 13), display.black)
+        display.print_symbol(X, random.randrange(0, 27), random.randrange(0, 13), display.yellow)
+        display.show_on_hardware()
 
-
-    display.print_symbol(A, 1, 0, display.black)
-    display.print_symbol(X, 1, 1, display.black)
-    display.print_symbol(NOT_A, 1, 2, display.black)
-
-    display.print_symbol(A, 2, 0, display.yellow)
-    display.print_symbol(X, 2, 1, display.yellow)
-    display.print_symbol(NOT_A, 2, 2, display.yellow)
-
-    display.black.rectangle((0, 24, 23, 31), fill=0)
-    display.print_symbol(A, 3, 0, display.yellow)
-    display.print_symbol(X, 3, 1, display.yellow)
-    display.print_symbol(A, 3, 2, display.black)
-    display.print_symbol(NOT_A, 3, 2, display.yellow)
-
-    display.show_on_hardware()
-    # display.show_on_software()
     # display.show_on_stub()
+    # display.show_on_software()
+
 
 except IOError as e:
     print(e)
